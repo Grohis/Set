@@ -1,0 +1,26 @@
+# Ввод строки от пользователя
+input_string = input()
+
+# Разделяем строку на слова
+words = input_string.split()
+
+# Создаем множество для отслеживания уникальных слов
+unique_words = set()
+
+# Список для хранения результата
+result = []
+
+# Перебираем каждое слово в исходной строке
+for word in words:
+    # Приводим слово к нижнему регистру для сравнения
+    lower_word = word.lower()
+    # Если слово еще не встречалось, добавляем его в результат
+    if lower_word not in unique_words:
+        unique_words.add(lower_word)
+        result.append(word)
+
+# Преобразуем список результата обратно в строку
+output_string = ' '.join(result)
+
+# Выводим итоговую строку
+print(output_string)
